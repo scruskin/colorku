@@ -1,0 +1,133 @@
+/* line 1, ../../build/scss/partials/_global.scss */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 8, ../../build/scss/partials/_global.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 1, ../../build/scss/partials/_structure.scss */
+#outer-wrapper {
+  margin: 0 auto;
+  max-height: 100%;
+  width: 100%;
+  max-width: 360px;
+  position: relative;
+}
+/* line 8, ../../build/scss/partials/_structure.scss */
+#outer-wrapper:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+/* line 16, ../../build/scss/partials/_structure.scss */
+#inner-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+/* line 25, ../../build/scss/partials/_structure.scss */
+.puzzle-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* line 32, ../../build/scss/partials/_structure.scss */
+.puzzle-matrix {
+  margin: .5%;
+  width: 32.3%;
+  height: 32.3%;
+  float: left;
+}
+
+/* line 40, ../../build/scss/partials/_structure.scss */
+.puzzle-cell {
+  padding: 0;
+  margin: 0;
+  float: left;
+  width: 33.3%;
+  height: 33.3%;
+}
+
+/* line 1, ../../build/scss/partials/_cells.scss */
+.puzzle-cell {
+  background: #fff;
+  border: solid #000;
+  border-width: 2px 0 0 2px;
+}
+/* line 6, ../../build/scss/partials/_cells.scss */
+.puzzle-cell:nth-child(3n) {
+  border-right-width: 2px;
+}
+/* line 10, ../../build/scss/partials/_cells.scss */
+.puzzle-cell:nth-child(n+7) {
+  border-bottom-width: 2px;
+}
+/* line 14, ../../build/scss/partials/_cells.scss */
+.puzzle-cell:after {
+  content: "";
+  border-radius: 50%;
+  height: 80%;
+  width: 80%;
+  margin: 10%;
+  display: block;
+}
+
+/* line 37, ../../build/scss/partials/_cells.scss */
+.puzzle-cell[data-val="0"]:after {
+  background-color: #fff;
+}
+
+/* line 37, ../../build/scss/partials/_cells.scss */
+.puzzle-cell[data-val="1"]:after {
+  background-color: #ffa3af;
+}
+
+/* line 37, ../../build/scss/partials/_cells.scss */
+.puzzle-cell[data-val="2"]:after {
+  background-color: #854f29;
+}
+
+/* line 37, ../../build/scss/partials/_cells.scss */
+.puzzle-cell[data-val="3"]:after {
+  background-color: #ff7f24;
+}
+
+/* line 37, ../../build/scss/partials/_cells.scss */
+.puzzle-cell[data-val="4"]:after {
+  background-color: #fff01a;
+}
+
+/* line 37, ../../build/scss/partials/_cells.scss */
+.puzzle-cell[data-val="5"]:after {
+  background-color: #2d7a1a;
+}
+
+/* line 37, ../../build/scss/partials/_cells.scss */
+.puzzle-cell[data-val="6"]:after {
+  background-color: #2582b1;
+}
+
+/* line 37, ../../build/scss/partials/_cells.scss */
+.puzzle-cell[data-val="7"]:after {
+  background-color: #f00;
+}
+
+/* line 37, ../../build/scss/partials/_cells.scss */
+.puzzle-cell[data-val="8"]:after {
+  background-color: #5925b1;
+}
+
+/* line 37, ../../build/scss/partials/_cells.scss */
+.puzzle-cell[data-val="9"]:after {
+  background-color: #999;
+}

@@ -1,2 +1,2 @@
 # colorku
-Color sudoku puzzle
+Color sudoku puzzle sample for Uber
