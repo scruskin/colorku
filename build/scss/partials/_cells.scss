@@ -3,6 +3,12 @@
   background:$white;
   border:solid $black;
   border-width:2px 0 0 2px;
+  cursor:pointer;
+  &.initial
+  {
+    cursor:default;
+    background:#dcdcdc;
+  }
   &:nth-child(3n)
   {
     border-right-width:2px;
@@ -33,9 +39,57 @@ $colors:  $color-0,
           $color-8,
           $color-9;
 
-@for $i from 0 through 9 {
-  .puzzle-cell[data-val="#{$i}"]:after
+.colors
+{
+  @for $i from 0 through 9
   {
-    background-color: nth($colors,($i+1));
+    .puzzle-cell[data-val="#{$i}"]:after
+    {
+      background-color: nth($colors,($i+1));
+    }
+  }
+}
+.numbers
+{
+  .puzzle-cell:after
+  {
+    content:attr(data-val);
+    display:block;
+    text-align: center;
+    padding-top: 10%;
+    font-size: 1em;
+  }
+  .puzzle-cell[data-val="0"]:after
+  {
+    font-size:0;
+  }
+}
+
+.tip-wrapper
+{
+  display:none;
+  width:75px;
+  height:75px;
+  .qtip &
+  {
+    display:block;
+  }
+}
+
+.tip-cell
+{
+  @extend .puzzle-cell;
+  border:0;
+  .numbers &
+  {
+    border:1px solid black;
+  }
+  &:after
+  {
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
   }
 }

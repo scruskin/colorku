@@ -1,0 +1,49 @@
+/*
+ * qTip2 - Pretty powerful tooltips - v2.2.1
+ * http://qtip2.com
+ *
+ * Copyright (c) 2014 
+ * Released under the MIT licenses
+ * http://jquery.org/license
+ */
+.qtip
+{
+  position: absolute;
+  left: -28000px;
+  top: -28000px;
+  display: none;
+
+  max-width: 280px;
+  min-width: 50px;
+
+  font-size: 10.5px;
+  line-height: 12px;
+
+  direction: ltr;
+
+  box-shadow: none;
+  padding: 0;
+}
+
+.qtip-content
+{
+  position: relative;
+  padding: 5px;
+  overflow: hidden;
+
+  text-align: left;
+  word-wrap: break-word;
+}
+
+/* Default tooltip style */
+.qtip-default
+{
+  border: 3px solid $black;
+  border-radius: 5px;
+  background-color: $white;
+  .numbers &
+  {
+    border:0;
+    border-radius:0;
+  }
+}

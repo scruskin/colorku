@@ -1,0 +1,45 @@
+.button
+{
+  width:45%;
+  height:3em;
+  margin-top:1.5em;
+  float:left;
+  display:table;
+  text-align:center;
+  background:$color-6;
+  color:$white;
+  font-family: 'Raleway', sans-serif;
+  font-weight:normal;
+  text-transform: capitalize;
+  cursor:pointer;
+  transition: background .3s;
+  &:hover
+  {
+    background:lighten($color-6,10%);
+  }
+  &:active,
+  &:focus
+  {
+    background:darken($color-6,10%);
+  }
+  &.disabled
+  {
+    background:#999;
+    cursor:default;
+  }
+}
+
+.button-inner
+{
+  display:table-cell;
+  vertical-align:middle;
+  .fa
+  {
+    padding-right:.5em;
+  }
+}
+
+#solve
+{
+  margin-right:10%;
+}

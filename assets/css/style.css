@@ -8,6 +8,13 @@ html, body {
 /* line 8, ../../build/scss/partials/_global.scss */
 * {
   box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* line 14, ../../build/scss/partials/_global.scss */
+h1 {
+  font-weight: bold;
+  font-size: 3em;
 }
 
 /* line 1, ../../build/scss/partials/_structure.scss */
@@ -50,7 +57,7 @@ html, body {
 }
 
 /* line 40, ../../build/scss/partials/_structure.scss */
-.puzzle-cell {
+.puzzle-cell, .tip-cell {
   padding: 0;
   margin: 0;
   float: left;
@@ -59,21 +66,27 @@ html, body {
 }
 
 /* line 1, ../../build/scss/partials/_cells.scss */
-.puzzle-cell {
+.puzzle-cell, .tip-cell {
   background: #fff;
   border: solid #000;
   border-width: 2px 0 0 2px;
+  cursor: pointer;
 }
-/* line 6, ../../build/scss/partials/_cells.scss */
-.puzzle-cell:nth-child(3n) {
+/* line 7, ../../build/scss/partials/_cells.scss */
+.puzzle-cell.initial, .initial.tip-cell {
+  cursor: default;
+  background: #dcdcdc;
+}
+/* line 12, ../../build/scss/partials/_cells.scss */
+.puzzle-cell:nth-child(3n), .tip-cell:nth-child(3n) {
   border-right-width: 2px;
 }
-/* line 10, ../../build/scss/partials/_cells.scss */
-.puzzle-cell:nth-child(n+7) {
+/* line 16, ../../build/scss/partials/_cells.scss */
+.puzzle-cell:nth-child(n+7), .tip-cell:nth-child(n+7) {
   border-bottom-width: 2px;
 }
-/* line 14, ../../build/scss/partials/_cells.scss */
-.puzzle-cell:after {
+/* line 20, ../../build/scss/partials/_cells.scss */
+.puzzle-cell:after, .tip-cell:after {
   content: "";
   border-radius: 50%;
   height: 80%;
@@ -82,52 +95,174 @@ html, body {
   display: block;
 }
 
-/* line 37, ../../build/scss/partials/_cells.scss */
-.puzzle-cell[data-val="0"]:after {
+/* line 46, ../../build/scss/partials/_cells.scss */
+.colors .puzzle-cell[data-val="0"]:after, .colors [data-val="0"].tip-cell:after {
   background-color: #fff;
 }
-
-/* line 37, ../../build/scss/partials/_cells.scss */
-.puzzle-cell[data-val="1"]:after {
+/* line 46, ../../build/scss/partials/_cells.scss */
+.colors .puzzle-cell[data-val="1"]:after, .colors [data-val="1"].tip-cell:after {
   background-color: #ffa3af;
 }
-
-/* line 37, ../../build/scss/partials/_cells.scss */
-.puzzle-cell[data-val="2"]:after {
+/* line 46, ../../build/scss/partials/_cells.scss */
+.colors .puzzle-cell[data-val="2"]:after, .colors [data-val="2"].tip-cell:after {
   background-color: #854f29;
 }
-
-/* line 37, ../../build/scss/partials/_cells.scss */
-.puzzle-cell[data-val="3"]:after {
+/* line 46, ../../build/scss/partials/_cells.scss */
+.colors .puzzle-cell[data-val="3"]:after, .colors [data-val="3"].tip-cell:after {
   background-color: #ff7f24;
 }
-
-/* line 37, ../../build/scss/partials/_cells.scss */
-.puzzle-cell[data-val="4"]:after {
+/* line 46, ../../build/scss/partials/_cells.scss */
+.colors .puzzle-cell[data-val="4"]:after, .colors [data-val="4"].tip-cell:after {
   background-color: #fff01a;
 }
-
-/* line 37, ../../build/scss/partials/_cells.scss */
-.puzzle-cell[data-val="5"]:after {
+/* line 46, ../../build/scss/partials/_cells.scss */
+.colors .puzzle-cell[data-val="5"]:after, .colors [data-val="5"].tip-cell:after {
   background-color: #2d7a1a;
 }
-
-/* line 37, ../../build/scss/partials/_cells.scss */
-.puzzle-cell[data-val="6"]:after {
+/* line 46, ../../build/scss/partials/_cells.scss */
+.colors .puzzle-cell[data-val="6"]:after, .colors [data-val="6"].tip-cell:after {
   background-color: #2582b1;
 }
-
-/* line 37, ../../build/scss/partials/_cells.scss */
-.puzzle-cell[data-val="7"]:after {
+/* line 46, ../../build/scss/partials/_cells.scss */
+.colors .puzzle-cell[data-val="7"]:after, .colors [data-val="7"].tip-cell:after {
   background-color: #f00;
 }
-
-/* line 37, ../../build/scss/partials/_cells.scss */
-.puzzle-cell[data-val="8"]:after {
+/* line 46, ../../build/scss/partials/_cells.scss */
+.colors .puzzle-cell[data-val="8"]:after, .colors [data-val="8"].tip-cell:after {
   background-color: #5925b1;
 }
-
-/* line 37, ../../build/scss/partials/_cells.scss */
-.puzzle-cell[data-val="9"]:after {
+/* line 46, ../../build/scss/partials/_cells.scss */
+.colors .puzzle-cell[data-val="9"]:after, .colors [data-val="9"].tip-cell:after {
   background-color: #999;
+}
+
+/* line 54, ../../build/scss/partials/_cells.scss */
+.numbers .puzzle-cell:after, .numbers .tip-cell:after {
+  content: attr(data-val);
+  display: block;
+  text-align: center;
+  padding-top: 10%;
+  font-size: 1em;
+}
+/* line 62, ../../build/scss/partials/_cells.scss */
+.numbers .puzzle-cell[data-val="0"]:after, .numbers [data-val="0"].tip-cell:after {
+  font-size: 0;
+}
+
+/* line 68, ../../build/scss/partials/_cells.scss */
+.tip-wrapper {
+  display: none;
+  width: 75px;
+  height: 75px;
+}
+/* line 73, ../../build/scss/partials/_cells.scss */
+.qtip .tip-wrapper {
+  display: block;
+}
+
+/* line 79, ../../build/scss/partials/_cells.scss */
+.tip-cell {
+  border: 0;
+}
+/* line 83, ../../build/scss/partials/_cells.scss */
+.numbers .tip-cell {
+  border: 1px solid black;
+}
+/* line 87, ../../build/scss/partials/_cells.scss */
+.tip-cell:after {
+  border-radius: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* line 1, ../../build/scss/partials/_buttons.scss */
+.button {
+  width: 45%;
+  height: 3em;
+  margin-top: 1.5em;
+  float: left;
+  display: table;
+  text-align: center;
+  background: #2582b1;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: normal;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: background .3s;
+}
+/* line 16, ../../build/scss/partials/_buttons.scss */
+.button:hover {
+  background: #349fd5;
+}
+/* line 20, ../../build/scss/partials/_buttons.scss */
+.button:active, .button:focus {
+  background: #1c6387;
+}
+/* line 25, ../../build/scss/partials/_buttons.scss */
+.button.disabled {
+  background: #999;
+  cursor: default;
+}
+
+/* line 32, ../../build/scss/partials/_buttons.scss */
+.button-inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 36, ../../build/scss/partials/_buttons.scss */
+.button-inner .fa {
+  padding-right: .5em;
+}
+
+/* line 42, ../../build/scss/partials/_buttons.scss */
+#solve {
+  margin-right: 10%;
+}
+
+/*
+ * qTip2 - Pretty powerful tooltips - v2.2.1
+ * http://qtip2.com
+ *
+ * Copyright (c) 2014 
+ * Released under the MIT licenses
+ * http://jquery.org/license
+ */
+/* line 9, ../../build/scss/partials/_tooltips.scss */
+.qtip {
+  position: absolute;
+  left: -28000px;
+  top: -28000px;
+  display: none;
+  max-width: 280px;
+  min-width: 50px;
+  font-size: 10.5px;
+  line-height: 12px;
+  direction: ltr;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* line 28, ../../build/scss/partials/_tooltips.scss */
+.qtip-content {
+  position: relative;
+  padding: 5px;
+  overflow: hidden;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+/* Default tooltip style */
+/* line 39, ../../build/scss/partials/_tooltips.scss */
+.qtip-default {
+  border: 3px solid #000;
+  border-radius: 5px;
+  background-color: #fff;
+}
+/* line 44, ../../build/scss/partials/_tooltips.scss */
+.numbers .qtip-default {
+  border: 0;
+  border-radius: 0;
 }
