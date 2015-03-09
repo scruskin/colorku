@@ -1,3 +1,48 @@
+/* line 28, ../../build/scss/partials/_variables.scss */
+.color1, .pink {
+  color: #ffa3af;
+}
+
+/* line 28, ../../build/scss/partials/_variables.scss */
+.color2, .brown {
+  color: #854f29;
+}
+
+/* line 28, ../../build/scss/partials/_variables.scss */
+.color3, .orange {
+  color: #ff7f24;
+}
+
+/* line 28, ../../build/scss/partials/_variables.scss */
+.color4, .yellow {
+  color: #fff01a;
+}
+
+/* line 28, ../../build/scss/partials/_variables.scss */
+.color5, .green {
+  color: #2d7a1a;
+}
+
+/* line 28, ../../build/scss/partials/_variables.scss */
+.color6, .blue {
+  color: #2582b1;
+}
+
+/* line 28, ../../build/scss/partials/_variables.scss */
+.color7, .red {
+  color: #f00;
+}
+
+/* line 28, ../../build/scss/partials/_variables.scss */
+.color8, .purple {
+  color: #5925b1;
+}
+
+/* line 28, ../../build/scss/partials/_variables.scss */
+.color9, .grey {
+  color: #999;
+}
+
 /* line 1, ../../build/scss/partials/_global.scss */
 html, body {
   height: 100%;
@@ -17,6 +62,28 @@ h1 {
   font-size: 3em;
 }
 
+@media (max-width: 360px) {
+  /* line 22, ../../build/scss/partials/_global.scss */
+  h1 {
+    text-align: center;
+    margin: .2em;
+  }
+}
+@media (max-height: 360px) {
+  /* line 31, ../../build/scss/partials/_global.scss */
+  h1 {
+    text-align: center;
+    position: absolute;
+    left: -25%;
+    width: 1em;
+  }
+  /* line 38, ../../build/scss/partials/_global.scss */
+  h1 span {
+    display: block;
+    line-height: .9em;
+    text-transform: uppercase;
+  }
+}
 /* line 1, ../../build/scss/partials/_structure.scss */
 #outer-wrapper {
   margin: 0 auto;
@@ -95,48 +162,48 @@ h1 {
   display: block;
 }
 
-/* line 46, ../../build/scss/partials/_cells.scss */
+/* line 35, ../../build/scss/partials/_cells.scss */
 .colors .puzzle-cell[data-val="0"]:after, .colors [data-val="0"].tip-cell:after {
   background-color: #fff;
 }
-/* line 46, ../../build/scss/partials/_cells.scss */
+/* line 35, ../../build/scss/partials/_cells.scss */
 .colors .puzzle-cell[data-val="1"]:after, .colors [data-val="1"].tip-cell:after {
   background-color: #ffa3af;
 }
-/* line 46, ../../build/scss/partials/_cells.scss */
+/* line 35, ../../build/scss/partials/_cells.scss */
 .colors .puzzle-cell[data-val="2"]:after, .colors [data-val="2"].tip-cell:after {
   background-color: #854f29;
 }
-/* line 46, ../../build/scss/partials/_cells.scss */
+/* line 35, ../../build/scss/partials/_cells.scss */
 .colors .puzzle-cell[data-val="3"]:after, .colors [data-val="3"].tip-cell:after {
   background-color: #ff7f24;
 }
-/* line 46, ../../build/scss/partials/_cells.scss */
+/* line 35, ../../build/scss/partials/_cells.scss */
 .colors .puzzle-cell[data-val="4"]:after, .colors [data-val="4"].tip-cell:after {
   background-color: #fff01a;
 }
-/* line 46, ../../build/scss/partials/_cells.scss */
+/* line 35, ../../build/scss/partials/_cells.scss */
 .colors .puzzle-cell[data-val="5"]:after, .colors [data-val="5"].tip-cell:after {
   background-color: #2d7a1a;
 }
-/* line 46, ../../build/scss/partials/_cells.scss */
+/* line 35, ../../build/scss/partials/_cells.scss */
 .colors .puzzle-cell[data-val="6"]:after, .colors [data-val="6"].tip-cell:after {
   background-color: #2582b1;
 }
-/* line 46, ../../build/scss/partials/_cells.scss */
+/* line 35, ../../build/scss/partials/_cells.scss */
 .colors .puzzle-cell[data-val="7"]:after, .colors [data-val="7"].tip-cell:after {
   background-color: #f00;
 }
-/* line 46, ../../build/scss/partials/_cells.scss */
+/* line 35, ../../build/scss/partials/_cells.scss */
 .colors .puzzle-cell[data-val="8"]:after, .colors [data-val="8"].tip-cell:after {
   background-color: #5925b1;
 }
-/* line 46, ../../build/scss/partials/_cells.scss */
+/* line 35, ../../build/scss/partials/_cells.scss */
 .colors .puzzle-cell[data-val="9"]:after, .colors [data-val="9"].tip-cell:after {
   background-color: #999;
 }
 
-/* line 54, ../../build/scss/partials/_cells.scss */
+/* line 43, ../../build/scss/partials/_cells.scss */
 .numbers .puzzle-cell:after, .numbers .tip-cell:after {
   content: attr(data-val);
   display: block;
@@ -144,31 +211,31 @@ h1 {
   padding-top: 10%;
   font-size: 1em;
 }
-/* line 62, ../../build/scss/partials/_cells.scss */
+/* line 51, ../../build/scss/partials/_cells.scss */
 .numbers .puzzle-cell[data-val="0"]:after, .numbers [data-val="0"].tip-cell:after {
   font-size: 0;
 }
 
-/* line 68, ../../build/scss/partials/_cells.scss */
+/* line 57, ../../build/scss/partials/_cells.scss */
 .tip-wrapper {
   display: none;
   width: 75px;
   height: 75px;
 }
-/* line 73, ../../build/scss/partials/_cells.scss */
+/* line 62, ../../build/scss/partials/_cells.scss */
 .qtip .tip-wrapper {
   display: block;
 }
 
-/* line 79, ../../build/scss/partials/_cells.scss */
+/* line 68, ../../build/scss/partials/_cells.scss */
 .tip-cell {
   border: 0;
 }
-/* line 83, ../../build/scss/partials/_cells.scss */
+/* line 72, ../../build/scss/partials/_cells.scss */
 .numbers .tip-cell {
   border: 1px solid black;
 }
-/* line 87, ../../build/scss/partials/_cells.scss */
+/* line 76, ../../build/scss/partials/_cells.scss */
 .tip-cell:after {
   border-radius: 0;
   height: 100%;
@@ -179,8 +246,9 @@ h1 {
 
 /* line 1, ../../build/scss/partials/_buttons.scss */
 .button {
-  width: 45%;
+  width: 30%;
   height: 3em;
+  margin-left: 0;
   margin-top: 1.5em;
   float: left;
   display: table;
@@ -193,35 +261,64 @@ h1 {
   cursor: pointer;
   transition: background .3s;
 }
-/* line 16, ../../build/scss/partials/_buttons.scss */
+/* line 17, ../../build/scss/partials/_buttons.scss */
+.button + .button {
+  margin-left: 5%;
+}
+/* line 21, ../../build/scss/partials/_buttons.scss */
 .button:hover {
   background: #349fd5;
 }
-/* line 20, ../../build/scss/partials/_buttons.scss */
+/* line 25, ../../build/scss/partials/_buttons.scss */
 .button:active, .button:focus {
   background: #1c6387;
 }
-/* line 25, ../../build/scss/partials/_buttons.scss */
+/* line 30, ../../build/scss/partials/_buttons.scss */
 .button.disabled {
   background: #999;
   cursor: default;
 }
 
-/* line 32, ../../build/scss/partials/_buttons.scss */
+/* line 37, ../../build/scss/partials/_buttons.scss */
 .button-inner {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 36, ../../build/scss/partials/_buttons.scss */
+/* line 41, ../../build/scss/partials/_buttons.scss */
 .button-inner .fa {
   padding-right: .5em;
 }
 
-/* line 42, ../../build/scss/partials/_buttons.scss */
-#solve {
-  margin-right: 10%;
+@media (max-width: 360px) {
+  /* line 49, ../../build/scss/partials/_buttons.scss */
+  .button {
+    width: 90%;
+    margin: 1.5em 5% 0;
+    float: none;
+  }
+  /* line 54, ../../build/scss/partials/_buttons.scss */
+  .button + .button {
+    margin: 1em 5% 0;
+  }
 }
-
+@media (max-height: 360px) {
+  /* line 63, ../../build/scss/partials/_buttons.scss */
+  .button {
+    position: absolute;
+    left: 100%;
+    margin: 0 .5em;
+    top: 20%;
+  }
+  /* line 69, ../../build/scss/partials/_buttons.scss */
+  .button + .button {
+    top: 40%;
+    margin: 0 .5em;
+  }
+  /* line 74, ../../build/scss/partials/_buttons.scss */
+  .button + .button + .button {
+    top: 60%;
+  }
+}
 /*
  * qTip2 - Pretty powerful tooltips - v2.2.1
  * http://qtip2.com

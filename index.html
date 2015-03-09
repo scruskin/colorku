@@ -10,7 +10,9 @@
 <body>
   <div id="outer-wrapper">
   <div id="inner-wrapper">
-    <h1>Colorku</h1>
+    <h1>
+      <span class="brown">C</span><span class="green">o</span><span class="orange">l</span><span class="purple">o</span><span class="pink">r</span><span class="red">k</span><span class="blue">u</span>
+    </h1>
     <div class="puzzle-wrapper">
       <div class="puzzle-matrix">
         <div class="puzzle-cell initial" data-row="1" data-col="1" data-val="5">
@@ -216,6 +218,11 @@
     <div class="button disabled" id="solve">
       <div class="button-inner">
         <i class="fa fa-check-circle"></i>validate
+      </div>
+    </div>
+    <div class="button" id="reset">
+      <div class="button-inner">
+        <i class="fa fa-undo"></i>Reset
       </div>
     </div>
     <div class="button" id="swap" data-mode="colors">

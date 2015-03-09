@@ -1,7 +1,8 @@
 .button
 {
-  width:45%;
+  width:30%;
   height:3em;
+  margin-left:0;
   margin-top:1.5em;
   float:left;
   display:table;
@@ -13,6 +14,10 @@
   text-transform: capitalize;
   cursor:pointer;
   transition: background .3s;
+  & + .button
+  {
+    margin-left:5%;
+  }
   &:hover
   {
     background:lighten($color-6,10%);
@@ -39,7 +44,36 @@
   }
 }
 
-#solve
+@include breakpoint($breakpoint-sm)
 {
-  margin-right:10%;
+  .button
+  {
+    width:90%;
+    margin: 1.5em 5% 0;
+    float:none;
+    & + .button
+    {
+      margin:1em 5% 0;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-sm-wide)
+{
+  .button
+  {
+    position:absolute;
+    left:100%;
+    margin:0 .5em;
+    top:20%;
+    & + .button
+    {
+      top:40%;
+      margin:0 .5em;
+    }
+    & + .button + .button
+    {
+      top:60%;
+    }
+  }
 }

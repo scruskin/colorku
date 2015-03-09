@@ -11,3 +11,25 @@ $color-6: #2582b1;
 $color-7: #f00;
 $color-8: #5925b1;
 $color-9: #999;
+
+$colors:  $color-0, 
+          $color-1,
+          $color-2,
+          $color-3,
+          $color-4,
+          $color-5,
+          $color-6,
+          $color-7,
+          $color-8,
+          $color-9;
+
+@for $i from 1 through 9
+{
+  .color#{$i}
+  {
+    color:nth($colors,$i+1);
+  }
+}
+
+$breakpoint-sm: max-width 360px;
+$breakpoint-sm-wide: max-height 360px;

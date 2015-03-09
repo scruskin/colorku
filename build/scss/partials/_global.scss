@@ -16,3 +16,30 @@ h1
   font-weight:bold;
   font-size:3em;
 }
+
+@include breakpoint($breakpoint-sm)
+{
+  h1
+  {
+    text-align:center;
+    margin:.2em;
+  }
+}
+
+@include breakpoint($breakpoint-sm-wide)
+{
+  h1
+  {
+    text-align:center;
+    position:absolute;
+    left:-25%;
+    width:1em;
+
+    span
+    {
+      display:block;
+      line-height:.9em;
+      text-transform:uppercase
+    }
+  }
+}
