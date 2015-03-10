@@ -11,7 +11,7 @@ Clone the repository
 `$ bundle install`
 
 ### To make style changes
-$ grunt watch
+`$ grunt watch`
 
 ### To build for production
-$ grunt build
+`$ grunt build`
