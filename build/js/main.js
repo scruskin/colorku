@@ -2,10 +2,14 @@ $(document).ready(init);
 
 function init()
 {
-  console.log('init');
-  // $('.puzzle-cell').on('click',cellClicked);
+  var tipTarget = 'event';
   $('#swap').on('click',swapModes);
   $('#reset').on('click',resetPuzzle);
+  if ($(window).width() <= 360 || $(window).height() <= 360)
+  {
+    $('html').addClass('mobile');
+    tipTarget = $('.puzzle-wrapper');
+  }
   $('.puzzle-cell').not('.initial').each(function(){
     $(this).qtip(
       {
@@ -25,7 +29,8 @@ function init()
         position:
         {
           my: 'center center',
-          at: 'center center'
+          at: 'center center',
+          target: tipTarget
         },
         events:
         {

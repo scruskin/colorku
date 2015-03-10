@@ -40,6 +40,10 @@
 }
 .numbers
 {
+  .puzzle-cell
+  {
+    font-family:"Helvetica Neue",Helvetica,sans-serif;
+  }
   .puzzle-cell:after
   {
     content:attr(data-val);
@@ -63,6 +67,11 @@
   {
     display:block;
   }
+  .mobile &
+  {
+    height:260px;
+    width:260px;
+  }
 }
 
 .tip-cell
@@ -72,6 +81,7 @@
   .numbers &
   {
     border:1px solid black;
+    font-size:1.5em;
   }
   &:after
   {
@@ -80,5 +90,10 @@
     width: 100%;
     margin: 0;
     cursor: pointer;
+
+    .numbers &
+    {
+      margin:.2em 0 0;
+    }
   }
 }
