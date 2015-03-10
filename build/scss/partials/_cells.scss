@@ -82,6 +82,10 @@
   {
     border:1px solid black;
     font-size:1.5em;
+    .mobile &
+    {
+      font-size:5em;
+    }
   }
   &:after
   {
@@ -94,6 +98,10 @@
     .numbers &
     {
       margin:.2em 0 0;
+      .mobile &
+      {
+        margin-top:.6em;
+      }
     }
   }
 }
